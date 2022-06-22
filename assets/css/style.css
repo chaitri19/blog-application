@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+table{
+    border:#111;
+    border-style: solid;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+}
+
+.views{
+    margin:10px;
+}
+
+.blogs{
+    max-width:1024px;
+    margin:auto;
+    border:1px;
+    border-style: groove;
+    border-color: gray;
+    padding:10px;
+    text-align: center;
+    margin:10px;
+}
+
+.blogs p{
+    max-width:800px;
+    overflow-wrap: break-word;
+    hyphens:manual;
+    word-break: break-all;
+}
+
+#table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+#table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+#table tr:hover td > a{
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid var(--border);}
+
+    td{
+        border: none;
+        position: relative;
+    }
+
+}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+
+.text-gradient{
+    padding:7px;
+    background-color:aquamarine;
+    border: 1px solid blue;
+    text-decoration: none;
+    display:inline-block;
+    color:#111
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    }
+
+    nav li {
+    float: left;
+    }
+
+    nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+    }
+
+    nav li a:hover {
+    background-color: #111;
+    }
