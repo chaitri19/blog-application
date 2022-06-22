@@ -1,0 +1,56 @@
+
+<!-- header-->
+<%-include('include/_header') %>
+<!-- /header-->
+
+<main id="site-main">
+    <div class="container">
+        <h1>Blogger</h1>
+        <h3>Welcome to Blogger</h3>
+
+        <form action="/" method="POST">
+            <table id="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <td>Image_URL</td>
+                        <td>Blog-Title</td>
+                        <td>Date</td>
+                        <td>Content</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% list.forEach(function(row) {%>
+                    <tr>
+                        <td>
+                            <img class="img2" src="<%= row.image_url%>" height="170" width="170">
+                        </td>
+                        <td>
+                            <%= row.title%>
+                        </td>
+                        <td>
+                            <%= row.date%>
+                        </td>
+                        <td>
+                            <script>
+                                var div=document.createElement("div");
+                                div.innerHTML='<p><%= row.content %></p>';
+                                var excerpt=div.innerText.substring(0,30)+"......";
+                                document.write(excerpt);
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href='/viewpage/<%= row.id%>' class="btn border-shadow update">
+                            <span class="text-gradient">Read More<i class="far fa-user"></i></span>
+                        </a></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+
+<!-- footer-->
+<%-include('include/_footer') %>
+<!-- /footer-->

@@ -1,0 +1,31 @@
+
+<!-- header-->
+    <%-include('include/_header') %>
+<!-- /header-->
+
+<main id="site-main">
+    <div class="container">
+
+
+        <form action="/" method="POST">
+            <div class="views">
+                    <div class="blogs">
+                        <h2><%= list.title%></h2>
+                        <img class="img2" src="<%= list.image_url%>" height="340" width="510"><br>
+                        <%= list.date%><br>
+                        <p><%= list.content%><br></p>
+                        <a href="/editblog/<%= list.id%>" class="btn border-shadow update">
+                            <span class="text-gradient">Edit<i class="far fa-user"></i></span>
+                        </a>
+                        <a href="/deleteblog/<%= list.id%>" class="btn border-shadow update">
+                            <span class="text-gradient">Delete<i class="far fa-user"></i></span>
+                        </a>
+                    </div>
+        </div>
+        </form>
+    </div>
+</main>
+
+<!-- footer-->
+<%-include('include/_footer') %>
+<!-- /footer-->
